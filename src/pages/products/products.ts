@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ProductDTO } from '../../models/product.dto';
 import { ProductService } from '../../services/product.service';
+import { ProductDetailsPage } from '../product-detail/product-details';
 
 @Component({
   selector: 'page-products',
@@ -20,5 +21,12 @@ export class ProductsPage {
   loadProducts(): void {
     this.productService.findAll()
       .subscribe(res => this.products = res);
+  }
+
+  showDetails(product) {
+    debugger;
+    this.navCtrl.push(ProductDetailsPage, {
+      product: product
+    });
   }
 }

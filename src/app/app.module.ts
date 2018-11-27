@@ -9,11 +9,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProductService } from '../services/product.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductDetailsPage } from '../pages/product-detail/product-details';
 
 @NgModule({
   declarations: [
     MyApp,
-    ProductsPage
+    ProductsPage, 
+    ProductDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ProductsPage
+    ProductsPage,
+    ProductDetailsPage
   ],
   providers: [
     StatusBar,
