@@ -24,7 +24,6 @@ export class ProductsPage {
   }
 
   showDetails(product) {
-    debugger;
     this.navCtrl.push(ProductDetailsPage, {
       product: product
     });

@@ -1,5 +1,29 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>Product {{product.NAME | titlecase}} Details</ion-title>
+        <ion-title text-left>Accounts - Product {{product.NAME | titlecase}}</ion-title>
     </ion-navbar>
 </ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let account of accounts" no-padding>
+            <ion-grid text-center>
+                <ion-row (click)="showDetails(account)">
+                    <ion-col col-6>
+                        <p>Customer</p>
+                        <h3 *ngIf="account && account.NAME">{{account.NAME | titlecase}}</h3>
+                        <h3 *ngIf="account && !account.NAME">{{account.FIRST_NAME | titlecase}} {{ account.LAST_NAME | titlecase}}</h3>
+                    </ion-col>
+                    <ion-col col-6>
+                        <p>Account ID</p>
+                        <h3>{{account.ACCOUNT_ID}}</h3>
+                    </ion-col>
+                    <ion-col col-12>
+                        <p>Avail Balance</p>
+                        <h3>{{account.AVAIL_BALANCE | currency:'BRL' }}</h3>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+    </ion-list>
+</ion-content>

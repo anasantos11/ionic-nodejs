@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title text-left>Account Detail</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid text-center>
+        <ion-row>
+            <ion-col col-6>
+                <p>Account ID</p>
+                <h5>{{account.ACCOUNT_ID}}</h5>
+            </ion-col>
+            <ion-col col-6>
+                <p>Status</p>
+                <h5>{{account.STATUS}}</h5>
+            </ion-col>
+            <ion-col col-6>
+                <p>Avail Balance</p>
+                <h5>{{account.AVAIL_BALANCE | currency:'BRL' }}</h5>
+            </ion-col>
+            <ion-col col-6>
+                <p>Pending Balance</p>
+                <h5>{{account.PENDING_BALANCE | currency:'BRL' }}</h5>
+            </ion-col>
+            <ion-col col-4>
+                <p>Open Date</p>
+                <h5>{{account.OPEN_DATE | date:'dd/MM/yy' }}</h5>
+            </ion-col>
+            <ion-col col-4>
+                <p>Last Activity</p>
+                <h5>{{account.LAST_ACTIVITY_DATE | date:'dd/MM/yy' }}</h5>
+            </ion-col>
+            <ion-col col-4>
+                <p>Close Date</p>
+                <h5>{{account.CLOSE_DATE | date:'dd/MM/yy' }}</h5>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
